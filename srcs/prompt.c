@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   prompt.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moel-hal <moel-hal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sferrad <sferrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 13:55:50 by sferrad           #+#    #+#             */
-/*   Updated: 2025/04/25 02:32:09 by moel-hal         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:55:24 by sferrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,46 +87,6 @@ int	execute_tokens(t_token *token_list, t_mini *shell, t_gc_list *gc)
 	}
 	return (1);
 }
-// int process_command(t_mini *shell, t_gc_list *gc)
-// {
-//     t_token *token_list;
-
-//     // Créer une gc locale pour les allocations temporaires
-//     t_gc_list cmd_gc;
-//     cmd_gc.head = NULL;
-
-//     token_list = parsing(shell->buffer, shell, &cmd_gc);
-// Utiliser cmd_gc au lieu de gc
-//     if (!token_list)
-//     {
-//         gc_free_all(&cmd_gc); // Libérer la mémoire même en cas d'échec
-//         return (0);
-//     }
-
-//     restore_tokens(token_list);
-//     shell->token_list = token_list;
-
-//     if (!tidying(shell))
-//     {
-//         gc_free_all(&cmd_gc);
-//         return (0);
-//     }
-
-//     shell->token_list = token_list;
-//     if (!shell->command)
-//     {
-//         gc_free_all(&cmd_gc);
-//         return (0);
-//     }
-
-//     exec(shell->command, shell, gc);
-//     ft_commandclear(&shell->command);
-
-//     // Libérer la mémoire temporaire après traitement de la commande
-//     gc_free_all(&cmd_gc);
-
-//     return (1);
-// }
 
 int	process_command(t_mini *shell, t_gc_list *gc)
 {

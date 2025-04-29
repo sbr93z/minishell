@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   handles_utils.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moel-hal <moel-hal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sferrad <sferrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:13:04 by moel-hal          #+#    #+#             */
-/*   Updated: 2025/04/25 16:46:26 by moel-hal         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:02:40 by sferrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 bool	handle_argument(t_token **token, t_command *cmd, t_mini *shell)
 {
-	cmd->arguments = add_argument(cmd->arguments, expand((*token)->arg, shell),
-			shell->gc);
+	cmd->arguments = add_argument(cmd->arguments, (*token)->arg, shell->gc);
 	if (!cmd->arguments)
 		return (printf("Erreur"), 0);
 	(*token) = (*token)->next;

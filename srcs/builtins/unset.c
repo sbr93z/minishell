@@ -6,7 +6,7 @@
 /*   By: sferrad <sferrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 22:15:57 by moel-hal          #+#    #+#             */
-/*   Updated: 2025/04/19 03:32:00 by sferrad          ###   ########.fr       */
+/*   Updated: 2025/04/29 11:58:47 by sferrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_unset(t_env **env, char *var, t_mini *shell)
 	prev = NULL;
 	while (curr)
 	{
-		if (strcmp(curr->key, var) == 0)
+		if (ft_strcmp(curr->key, var) == 0)
 		{
 			if (prev)
 				prev->next = curr->next;

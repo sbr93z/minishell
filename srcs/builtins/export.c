@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   export.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moel-hal <moel-hal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sferrad <sferrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/22 22:16:16 by moel-hal          #+#    #+#             */
-/*   Updated: 2025/04/25 16:25:13 by moel-hal         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:58:33 by sferrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	process_valid_key(char *arg, char *key, t_env **env_list, t_gc_list *gc)
 
 	if (ft_strchr(arg, '='))
 	{
-		content = strdup(ft_strchr(arg, '=') + 1);
+		content = ft_strdup(ft_strchr(arg, '=') + 1);
 		if (!key || !content)
 		{
 			free(key);

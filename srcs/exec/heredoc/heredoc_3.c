@@ -3,21 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   heredoc_3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moel-hal <moel-hal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sferrad <sferrad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 16:38:32 by moel-hal          #+#    #+#             */
-/*   Updated: 2025/04/23 02:37:26 by moel-hal         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:57:21 by sferrad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/minishell.h"
-
-// bool	starts_with_heredoc(const char *str)
-// {
-// 	while (*str && (*str == ' ' || *str == '\t'))
-// 		str++;
-// 	return (str[0] == '<' && str[1] == '<');
-// }
 
 void	var_update(t_env **env_list, char *key, char *content)
 {
